@@ -8,7 +8,7 @@ flask_app = Flask(__name__)
 @flask_app.route("/", methods=["POST", "GET"], endpoint='')
 def home():
     dataMining = DataMining()
-    dataMining.PrepocessingData("dataset/calonpembelimobil.csv")    
+    dataMining.PrepocessingData("datasets/calonpembelimobil.csv")    
     dataMining.MetodeRandomForest()
     dataMining.MetodeNaiveBayes()
     dataMining.MetodeXGBoost()
