@@ -1,12 +1,5 @@
 {
-    "version": 2,
-    "builds": [
-      { "src": "public/**/*", "use": "@vercel/static" },
-      { "src": "/(.*)", "use": "@vercel/python" }
-    ],
-    "routes": [
-      { "src": "/(.*)", "dest": "app.py" },
-      { "handle": "filesystem" }
+    "rewrites": [
+      { "source": "/(.*)", "destination": "app" }
     ]
   }
-  
